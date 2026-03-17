@@ -1,0 +1,36 @@
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - ipykernel
+# Phasenet - only needed for run local mode in notebook
+  - uvicorn
+  - fastapi
+  - kafka-python
+  - keras
+#  # Chart
+#  - nbformat
+#  - ipyleaflet
+#  - geopandas
+
+# quakeflow
+  - python=3.8
+  - numpy
+  - kfp==1.8.22
+  - scipy
+  - matplotlib
+  - pandas
+  - scikit-learn
+  - tqdm
+  - obspy
+  - pymongo
+  # - tensorflow==2.11.0
+  
+  - pip
+  - pip:
+    - minio
+    - s3fs
+    - boto3
+    - gmma==1.2.10
+    - tensorflow==2.13.0 #Changing acc to zhuwq0/phasenet-api:latest tf version
+    - --extra-index-url https://pypi.anaconda.org/zhuwq0/simple
